@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="icofont/icofont.min.css">
+    <link rel="stylesheet" href="Boot3Lib/css/bootstrap.min.css">
+    <script src="Boot3Lib/js/jquery.js"></script>
+    <script src="Boot3Lib/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+<header id="header" class="top-fixed">
+    <div class="container-fluid d-flex">
+        <h1 class="logo mr-auto">
+            <img src="images/home.jpg" alt="">
+        </h1>
+        
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+
+<li> <a href="P_home.html" alt="" >Home</a> </li>
+<li> <a href="p_about.html" alt="" >About</a> </li>
+<li> <a href="p_property.html" alt="" >properties</a> </li>
+<li> <a href="p_contact.html" alt="" > contact</a> </li>
+<li> <a href="p_member.html" alt="" > Become Member</a> </li>
+<li> <a href="p_login.html" alt="" > Login </a> </li>
+
+
+            </ul>
+        </nav>
+
+    </div>
+
+
+</header>
+
+
+<div class="container-fluid">
+    <div class="row">
+        ```html
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+/* GENERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f7f9fc;
+    color: #163047;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background:
+        linear-gradient(90deg,
+        rgba(5, 32, 48, 0.90) 0%,
+        rgba(5, 32, 48, 0.68) 45%,
+        rgba(5, 32, 48, 0.10) 100%),
+        url('images/home.jpg');
+
+    background-position: center;
+    background-size: cover;
+    padding: 90px 0 110px;
+}
+
+.hero-content {
+    max-width: 700px;
+    color: white;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: rgba(0, 190, 160, 0.18);
+    border: 1px solid #16c6a5;
+    color: #4ce6c5;
+    padding: 8px 17px;
+    border-radius: 30px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 5vw, 65px);
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: #20d3ae;
+}
+
+.hero p {
+    color: #e3edf2;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 560px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary-custom {
+    background: #08a88a;
+    color: white;
+    padding: 14px 27px;
+    border-radius: 7px;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid #08a88a;
+}
+
+.btn-primary-custom:hover {
+    background: #087d6b;
+    border-color: #087d6b;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.btn-outline-custom {
+    background: transparent;
+    color: white;
+    padding: 14px 27px;
+    border-radius: 7px;
+    font-weight: 600;
+    display: inline-block;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.btn-outline-custom:hover {
+    background: white;
+    color: #163047;
+}
+
+/* SEARCH BOX */
+.search-wrapper {
+    position: relative;
+    z-index: 5;
+    margin-top: -55px;
+}
+
+.search-box {
+    background: white;
+    border-radius: 14px;
+    padding: 27px;
+    box-shadow: 0 15px 50px rgba(15, 43, 61, 0.13);
+}
+
+.search-heading {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.search-heading span {
+    color: #08a88a;
+}
+
+.search-box label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 9px;
+    display: block;
+}
+
+.search-box select,
+.search-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dfe7ed;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+    color: #42566a;
+    min-height: 48px;
+}
+
+.search-box select:focus,
+.search-box input:focus {
+    border-color: #08a88a;
+    box-shadow: 0 0 0 3px rgba(8, 168, 138, 0.10);
+}
+
+.search-btn {
+    background: #08a88a;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    width: 100%;
+    min-height: 48px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #087d6b;
+}
+
+/* FEATURES */
+.features-section {
+    padding: 65px 0;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 25px 15px;
+    height: 100%;
+    background: white;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(15, 43, 61, 0.09);
+}
+
+.feature-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    background: #e3f8f3;
+    color: #079b80;
+    border-radius: 50%;
+    font-size: 26px;
+}
+
+.feature-card h4 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.feature-card p {
+    font-size: 13px;
+    color: #778696;
+    margin: 0;
+}
+
+/* SECTION TITLE */
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading .subtitle {
+    color: #08a88a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-size: clamp(27px, 4vw, 38px);
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #7a8795;
+    font-size: 14px;
+}
+
+/* PROPERTIES */
+.properties-section {
+    padding: 60px 0 85px;
+    background: #f0f5f8;
+}
+
+.property-card {
+    background: white;
+    border-radius: 13px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(15, 43, 61, 0.05);
+    transition: 0.35s;
+}
+
+.property-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(15, 43, 61, 0.13);
+}
+
+.property-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.property-card:hover .property-image img {
+    transform: scale(1.08);
+}
+
+.property-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #08a88a;
+    color: white;
+    padding: 6px 13px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.property-details {
+    padding: 22px;
+}
+
+.property-location {
+    color: #7a8795;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.property-location i {
+    color: #08a88a;
+    margin-right: 5px;
+}
+
+.property-details h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.property-price {
+    color: #08a88a;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 17px;
+}
+
+.property-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #edf0f3;
+    color: #6c7b8b;
+    font-size: 12px;
+}
+
+.property-info i {
+    color: #08a88a;
+    margin-right: 5px;
+}
+
+.view-property {
+    display: inline-block;
+    margin-top: 20px;
+    color: #087f6c;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.view-property:hover {
+    color: #064f43;
+}
+
+/* CTA SECTION */
+.cta-section {
+    margin: 75px auto;
+    padding: 55px 35px;
+    border-radius: 18px;
+    background: linear-gradient(120deg, #063b4a, #087f75);
+    color: white;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: clamp(25px, 4vw, 36px);
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    color: #d9eeeb;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    .hero {
+        min-height: 540px;
+        padding: 70px 0 95px;
+        background-position: 60% center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .search-wrapper {
+        margin-top: -40px;
+    }
+
+    .search-box {
+        padding: 20px;
+    }
+
+    .search-heading {
+        font-size: 19px;
+    }
+
+    .features-section {
+        padding: 45px 0;
+    }
+
+    .property-image {
+        height: 230px;
+    }
+
+    .properties-section {
+        padding: 45px 0 60px;
+    }
+
+    .cta-section {
+        margin: 45px auto;
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .property-details {
+        padding: 17px;
+    }
+
+
+
+}
+
+
+ .footer{
+    min-height:500px;
+    background:#061522
+}
+</style>
+
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="hero-tag">
+                <i class="fa-solid fa-house"></i>
+                BUY . SELL . RENT
+            </div>
+
+            <h1>
+                Find Your<br>
+                <span>Dream Home</span> Today
+            </h1>
+
+            <p>
+                Discover the perfect property for your family.
+                Explore beautiful homes, premium apartments and
+                residential plots in your favourite location.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#properties" class="btn-primary-custom">
+                    Explore Properties
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+
+                <a href="p_contact.html" class="btn-outline-custom">
+                    Contact Us
+                    <i class="fa-solid fa-phone ms-2"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= PROPERTY SEARCH ================= -->
+<section class="search-wrapper">
+    <div class="container">
+
+        <div class="search-box">
+
+            <div class="search-heading">
+                Find Your <span>Perfect Property</span>
+            </div>
+
+            <form action="p_property.html" method="get">
+                <div class="row g-3 align-items-end">
+
+                    <div class="col-lg-3 col-md-6">
+                        <label>
+                            <i class="fa-solid fa-location-dot me-1"></i>
+                            Location
+                        </label>
+
+                        <input type="text"
+                               name="location"
+                               placeholder="Enter city or location">
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <label>
+                            <i class="fa-solid fa-house me-1"></i>
+                            Property Type
+                        </label>
+
+                        <select name="type">
+                            <option value="">All Properties</option>
+                            <option value="house">Independent House</option>
+                            <option value="apartment">Apartment / Flat</option>
+                            <option value="land">Residential Plot</option>
+                            <option value="rent">Rental Property</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <label>
+                            <i class="fa-solid fa-indian-rupee-sign me-1"></i>
+                            Maximum Budget
+                        </label>
+
+                        <select name="budget">
+                            <option value="">Any Budget</option>
+                            <option value="2000000">Up to ₹20 Lakh</option>
+                            <option value="4000000">Up to ₹40 Lakh</option>
+                            <option value="6000000">Up to ₹60 Lakh</option>
+                            <option value="10000000">Up to ₹1 Crore</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <button type="submit" class="search-btn">
+                            <i class="fa-solid fa-magnifying-glass me-2"></i>
+                            Search Property
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+<section class="features-section">
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-house-circle-check"></i>
+                    </div>
+
+                    <h4>Verified Properties</h4>
+                    <p>Explore carefully verified property listings.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <h4>Secure Deals</h4>
+                    <p>Make informed decisions with expert guidance.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+
+                    <h4>Expert Support</h4>
+                    <p>Get help throughout your property journey.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <h4>Prime Locations</h4>
+                    <p>Find properties in convenient neighbourhoods.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= FEATURED PROPERTIES ================= -->
+<section class="properties-section" id="properties">
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="subtitle">Explore Our Listings</span>
+
+            <h2>Featured Properties</h2>
+
+            <p>
+                Discover properties selected to help you find
+                the perfect place to call home.
+            </p>
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- PROPERTY 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="property-card">
+
+                    <div class="property-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80"
+                            alt="Luxury modern villa">
+
+                        <span class="property-badge">For Sale</span>
+                    </div>
+
+                    <div class="property-details">
+
+                        <div class="property-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Lucknow, Uttar Pradesh
+                        </div>
+
+                        <h3>Luxury Modern Villa</h3>
+
+                        <div class="property-price">₹85,00,000</div>
+
+                        <div class="property-info">
+                            <span><i class="fa-solid fa-bed"></i> 4 Beds</span>
+                            <span><i class="fa-solid fa-bath"></i> 3 Baths</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 2500 Sq Ft</span>
+                        </div>
+
+                        <a href="p_property.html" class="view-property">
+                            View Details
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PROPERTY 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="property-card">
+
+                    <div class="property-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=800&q=80"
+                            alt="Modern residential apartment">
+
+                        <span class="property-badge">For Sale</span>
+                    </div>
+
+                    <div class="property-details">
+
+                        <div class="property-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Khalilabad, Sant Kabir Nagar
+                        </div>
+
+                        <h3>Modern Apartment</h3>
+
+                        <div class="property-price">₹42,00,000</div>
+
+                        <div class="property-info">
+                            <span><i class="fa-solid fa-bed"></i> 2 Beds</span>
+                            <span><i class="fa-solid fa-bath"></i> 2 Baths</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 1200 Sq Ft</span>
+                        </div>
+
+                        <a href="p_property.html" class="view-property">
+                            View Details
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PROPERTY 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="property-card">
+
+                    <div class="property-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+                            alt="Green residential plot">
+
+                        <span class="property-badge">For Sale</span>
+                    </div>
+
+                    <div class="property-details">
+
+                        <div class="property-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Near Gudamba, Lucknow
+                        </div>
+
+                        <h3>Residential Plot</h3>
+
+                        <div class="property-price">₹18,00,000</div>
+
+                        <div class="property-info">
+                            <span><i class="fa-solid fa-ruler-combined"></i> 1500 Sq Ft</span>
+                            <span><i class="fa-solid fa-road"></i> Road Access</span>
+                        </div>
+
+                        <a href="p_property.html" class="view-property">
+                            View Details
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- PROPERTY 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="property-card">
+
+                    <div class="property-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
+                            alt="Contemporary family house">
+
+                        <span class="property-badge">For Rent</span>
+                    </div>
+
+                    <div class="property-details">
+
+                        <div class="property-location">
+                            <i class="fa-solid fa-location-dot"></i>
+                            Faizabad Road, Lucknow
+                        </div>
+
+                        <h3>Premium Family House</h3>
+
+                        <div class="property-price">₹25,000 / Month</div>
+
+                        <div class="property-info">
+                            <span><i class="fa-solid fa-bed"></i> 3 Beds</span>
+                            <span><i class="fa-solid fa-bath"></i> 2 Baths</span>
+                            <span><i class="fa-solid fa-ruler-combined"></i> 1800 Sq Ft</span>
+                        </div>
+
+                        <a href="p_property.html" class="view-property">
+                            View Details
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- VIEW ALL BUTTON -->
+        <div class="text-center mt-5">
+            <a href="p_property.html" class="btn-primary-custom">
+                View All Properties
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= CALL TO ACTION ================= -->
+<section class="container">
+    <div class="cta-section">
+
+        <h2>Ready to Find Your Dream Home?</h2>
+
+        <p>
+            Let us help you discover a property that matches
+            your lifestyle, needs and budget.
+        </p>
+
+        <a href="p_contact.html" class="btn-primary-custom"
+           style="background:white; color:#087f75; border-color:white;">
+            Get in Touch
+            <i class="fa-solid fa-arrow-right ms-2"></i>
+        </a>
+
+    </div>
+</section>
+
+    </div>
+
+
+
+<div class=" row footer" style="min-height: 500px; background:#061522">
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="row" style="min-height: 60px;"></div>
+            <div class="col-sm-12">
+                <p style="color: gold; font-size: 29px;">ESTATEPRO</p>
+            <a href="" style=" font-size: 17px;">Your trusted real estate partner for land, houses, apartments and premium properties.</a>
+            </div>
+        </div>
+        <div class="col-sm-3">
+                        <div class="row" style="min-height: 60px;"></div>
+
+            <p style="font-size: 29px; color:gold; ">Quick Links</p>
+            <a href="" style="font-size: 20px;">Home</a> <br>
+            <a href="" style="font-size: 20px;">About Us</a> <br>
+            <a href="" style="font-size: 20px;">Contact Us</a> <br>
+            <a href="" style="font-size: 20px;">Properties</a> <br>
+            <a href="" style="font-size: 20px;">Reviews</a> <br>
+
+        </div>
+        <div class="col-sm-3">
+                        <div class="row" style="min-height: 60px;"></div>
+                        <p style="font-size: 29px; color:gold; ">Properties</p>
+            <a href="" style="font-size: 20px;">Land & Plots</a> <br>
+            <a href="" style="font-size: 20px;">Houses</a> <br>
+            <a href="" style="font-size: 20px;">Apartments</a> <br>
+            <a href="" style="font-size: 20px;">Luxury Villas</a> <br>
+
+
+        </div>
+        <div class="col-sm-3">
+                        <div class="row" style="min-height: 60px;"></div>
+                           <p style="font-size: 29px; color:gold; ">contact us</p> <br>
+                           <a href="" class="icofont-phone" style="font-size: 20px;"> +91 98765 43210</a> <br> <br>
+                           <a href=""  style="font-size: 20px;"> 📍 Lucknow, Uttar Pradesh</a> <br><br>
+                           <a href=""  class="icofont-email" style="font-size: 20px;"> info@estatepro.com</a> 
+                           <div class="row" style="min-height: 50px;"></div>
+
+                           <a href="" class="icofont-facebook" style="color:white; font-size: 29px;"></a>
+                           <a href="" class="icofont-instagram" style="color:white; font-size: 29px;"></a>
+                           <a href="" class="icofont-whatsapp" style="color:white; font-size: 29px;"></a>
+                           <a href="" class="icofont-twitter" style="color:white; font-size: 29px;"></a>
+                           <a href="" class="icofont-linkedin" style="color:white; font-size: 29px;"></a>
+            
+
+
+
+        </div>
+    </div>
+</div>
+<div class="col-sm-1"></div>
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/counterup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
